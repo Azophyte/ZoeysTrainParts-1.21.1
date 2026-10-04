@@ -1,0 +1,21 @@
+
+{
+"variants": {
+  "facing=north": {
+      "model": "zoeys_train_parts:block/gangway",
+      "y": 0
+    },
+  "facing=east": {
+    "model": "zoeys_train_parts:block/gangway",
+    "y": 90
+  },
+  "facing=south": {
+    "model": "zoeys_train_parts:block/gangway",
+    "y": 180
+  },
+  "facing=west": {
+    "model": "zoeys_train_parts:block/gangway",
+    "y": 270
+  }
+  }
+}
