@@ -1,5 +1,6 @@
 package net.azophyte.zoeys_train_parts;
 
+import net.azophyte.zoeys_train_parts.Model.GangwayFrameModel;
 import net.azophyte.zoeys_train_parts.entity.ModBlockEntities;
 import net.azophyte.zoeys_train_parts.entity.renderer.GangwayBlockEntityRenderer;
 import net.minecraft.client.Minecraft;
@@ -37,5 +38,10 @@ public class ZoeysTrainPartsClient {
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.GANGWAY_BE.get(), GangwayBlockEntityRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerGangwayFrameModel(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(GangwayFrameModel.LAYER_LOCATION, GangwayFrameModel::createBodyLayer);
     }
 }
